@@ -1,4 +1,4 @@
-# informaticaWEB2INFO1
+# informaticaWEB2INFOI
 Materiais utilizados e diponibilizados no segundo semestre do curso
 
 ###  <h1><img src="https://github.com/icsalgado/informaticaWeb1INFO1/blob/master/assets/cpa.jpg" width="45px"> COLÉGIO PROTÁSIO ALVES</h1>
