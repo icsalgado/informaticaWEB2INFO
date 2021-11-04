@@ -1,8 +1,9 @@
+<?php
 
-$nome = filter_input(INPUT_GET,'nome');
-$idade = filter_input(INPUT_GET,'idade');
-if($nome && $idade){
- echo "Nome: ".$nome." <br> Idade: ".$idade;
+$name = filter_input(INPUT_GET, 'nome');//filter_input é uma função do php que captura o campo do formulário e verifica se ele está preenchido
+
+if ($name){
+    echo "O nome foi ".$name;
 }else{
- echo "Nao enviou!";
+    echo "nome não informado";
 }

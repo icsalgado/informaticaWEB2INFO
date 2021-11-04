@@ -14,7 +14,7 @@
             require_once('./template/header.php');//chama apenas se for a primeira vez
         ?>
 
-    <form method="GET" action="./template/recebe.php">
+    <form method="GET" action="./template/recebe.php"><!--GET mostra os dados enviados na barra da URL, o POST mostra apenas o arquivo de destino. o action envia os dados um arquivo externo-->
         <label>Nome:</br>
         <input type="text" name="nome"/><br>
         <label>Idade:</br>
