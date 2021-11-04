@@ -7,5 +7,6 @@ if ($name && $age){
     echo "O nome foi ".$name;
     echo "<br>A idade foi ".$age;
 }else{
-    echo "um dos campos ou ambos não foram informados";
+    header("Location: ../index.php");//a função header() vai mudar o cabeçalho da requisição, redirecionar para o arquivo escolhido. deve ser usada se nenhuma info fio enviada ainda
+    exit;//para encerrar o código
 }
