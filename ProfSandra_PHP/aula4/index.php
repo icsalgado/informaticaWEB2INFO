@@ -19,6 +19,8 @@
         <input type="text" name="nome"/><br>
         <label>Idade:</br>
         <input type="text" name="idade"/><br>
+        <label>E-mail:</br>
+        <input type="text" name="email"/><br>
         <input type="submit" value="Enviar"/>
     </form>
     </div>
