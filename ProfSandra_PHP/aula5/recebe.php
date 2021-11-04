@@ -7,6 +7,12 @@ $age = filter_input(INPUT_GET, 'idade', FILTER_VALIDATE_INT);//input_post quando
 $email = filter_input(INPUT_GET, 'email', FILTER_VALIDATE_EMAIL);//o ultimo parametro é de validação de email
 
 if ($name && $age){
+
+    //configurando um cookie - recebe 3 parametros, nome, valor salvo e validade, deve ser configurado antes de exibir qualquer coisa na tela
+
+    $validadeCookie = time()+(86400*30);//essa variavel conta a partir da data atual com o time(), um dia multiplicado por 30.
+    setcookie('nome', $name, $validadeCookie);//função que configura o cookie
+
     echo "O nome foi ".$name;
     echo "<br>A idade foi ".$age;
     echo "<br>O email foi ".$email;
