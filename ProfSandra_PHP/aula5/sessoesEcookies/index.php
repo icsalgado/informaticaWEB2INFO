@@ -14,7 +14,7 @@
             session_start();//inicia uma sessão PHP
 
             require_once('./setCookie.php');//apenas para exibir o coockie salvo
-            if($_SESSION['aviso']){//testa se a variavel estã com mensagem
+            if($_SESSION['aviso']){//testa se a variavel esta com mensagem
                 echo $_SESSION['aviso'];//exibe a menságem
                 $_SESSION['aviso'] = '';//remove a mensagem para não ficar aparecendo sempre
             }
@@ -32,4 +32,4 @@
     </form>
     </div>
 </body>
-</html>
+</html> 

@@ -15,7 +15,7 @@ if ($name && $age){
 
     echo "O nome foi ".$name;
     echo "<br>A idade foi ".$age;
-    echo "<br>O email foi ".$email;
+    echo "<br>O email foi ".$email; 
 
 }else{
     $_SESSION['aviso']='Preencha os campos corretamente';//salva o aviso no array $_SESSION
