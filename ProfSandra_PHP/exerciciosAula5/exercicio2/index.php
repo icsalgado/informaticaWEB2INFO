@@ -17,14 +17,14 @@
     
     <ul>
         <?php
-            $lista = file_get_contents('lista.txt');
+            $lista = file_get_contents('lista.txt');//pega os dados da lista.txt
 
-            $lista = explode("</li>", $lista);
-            $linhas = count($lista);
+            $lista = explode("</li>", $lista);// separa os dados em um array conforme o fim da tag li
+            $linhas = count($lista);//pega o numero de elementos desse array
         
             for($i=0; $i < $linhas; $i++){
                 
-                echo $lista[$i];
+                echo $lista[$i];//renderiza na tela os elementos conforme o tamanho do array
             }
             
         ?>
