@@ -26,6 +26,7 @@
         ?>
         <a href="adicionar.php">Adicionar Usuário</a>
         <br>
+        <br>
         <table border="1px" width="100%">
             <!-- Cabeçalho -->
             <tr>

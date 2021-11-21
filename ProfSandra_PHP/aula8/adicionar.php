@@ -8,16 +8,23 @@
     </head>
     <body>
         <h2>Adicionar Usuário</h2>
-        <form action="adicionar_action.php" method="POST">
-            <label>
-                Name: <br>
-                <input type="text" name="name">
-            </label><br>
-            <label>
-                Email: <br>
-                <input type="text" name="email">
-            </label><br>
-            <input type="submit" value="Adicionar">
-        </form>
+        
+        <div class="container"> 
+            <form method="POST" action="adicionar_action.php">
+
+                    <h3>Cadastro de Usuários no Sistema</h3> 
+                    <p>Nome:</p> 
+                    <input type="text" name="nome"/>
+                    <p>E-mail: </p>
+                    <input type="email" name="email"/>
+                    <p>Senha:</p>
+                    <input type="password" name="senha"/>
+                    <p>Nível: </p>
+                    <input type="number" step="1" min=1 max=2 name="nivel"/> 1 - Adm do Sistema 2 - Usuário do Sistema
+                    <br><br><p><input type="submit" value="Cadastrar" /></p>
+                    
+            </form>
+        </div>
+        
     </body>
 </html>
