@@ -19,9 +19,8 @@
         //if($sql->fetch() > 0){
         if($sql->rowCount() > 0){
             ?>
-                <script>
-                    alert("Usuário já cadastrado");
-                </script>
+                <html><a href="index.php">Voltar</a></html>
+                <script>alert("Usuário já cadastrado")</script>
             <?php
         }else{
             $sql = "INSERT INTO usuarios (nome, email, senha, nivel) VALUE (:nome, :email, :senha, :nivel)";//forma mais segura

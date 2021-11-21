@@ -1,3 +1,14 @@
+<?php
+    //liberada somente com a sessão iniciada
+    session_start();
+    if(isset($_SESSION['nivel']) && !empty($_SESSION['nivel'])){//verifica se a sessão foi iniciada e se não está vazio
+        echo "Acesso";
+    }else{
+        header('Location: login.php');
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +18,8 @@
         <title>Document</title>
     </head>
     <body>
-        <h2>Adicionar Usuário</h2>
+        <h2>Adicionar Usuário</h2><br>
+        <a href="sair.php">Sair</a>
         
         <div class="container"> 
             <form method="POST" action="adicionar_action.php">

@@ -10,6 +10,14 @@
         <?php
             require './config.php';//conexão com o bando em outro arquivo
 
+            session_start();
+            if(isset($_SESSION['nivel']) && !empty($_SESSION['nivel'])){//verifica se a sessão foi iniciada e se não está vazio
+                
+            }else{
+                header('Location: login.php');
+                exit;
+            }
+
             $lista = [];
             $sql = $pdo->query('SELECT * FROM usuarios');
             if($sql->rowCount() > 0){//verifica se tem usuario cadastrado
@@ -24,7 +32,8 @@
             echo '<pre>';//para mostrar cada registro em uma linha
             print_r($dados);//mostra um array com os dados do banco  */ 
         ?>
-        <a href="adicionar.php">Adicionar Usuário</a>
+        <a href="adicionar.php">Adicionar Usuário</a><br>
+        <a href="sair.php">Sair</a>
         <br>
         <br>
         <table border="1px" width="100%">
@@ -42,7 +51,12 @@
                     <td> <?=$dados['id']; ?> </td>
                     <td> <?=$dados['nome']; ?> </td>
                     <td> <?=$dados['email']; ?> </td>
-                    <td>  </td>
+                    <td>    
+                        <a href="editar.php?id=<?=$dados['id'];?>">[Editar]</a> 
+                            <!-- para editar o id correspondente -->
+                        <a href="excluir.php?id=<?=$dados['id'];?>" onclick="return confirm('excluir')">[Excluir]</a>
+                            <!-- para editar o id correspondente --> 
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </table>
