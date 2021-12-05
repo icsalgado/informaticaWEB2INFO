@@ -14,14 +14,14 @@
 	
 			if(!empty($_POST['senha'])) {
 				$senha = $_POST['senha'];
-	
+	//Atualiza, troca a senha na tabela usuarios
 				$sql = "UPDATE usuarios SET senha = :senha WHERE id = :id";
 				$sql = $pdo->prepare($sql);
 				$sql->bindValue(":senha", md5($senha));
 				$sql->bindValue(":id", $id);
 				$sql->execute();
-	
-				$sql = "UPDATE usuario_token SET used = 1 WHERE hash = :hash";
+	//atualiza na tabela usuario_token
+				$sql = "UPDATE usuarios_token SET used = 1 WHERE hash = :hash";
 				$sql = $pdo->prepare($sql);
 				$sql->bindValue(":hash", $token);
 				$sql->execute();
@@ -29,9 +29,9 @@
 				echo "Senha alterada com sucesso!";
 				exit;
 			}
-        //fechamento do if e o else vai para o proximo bloco php
-?>
+	
 
+?>
 <form method="POST">
 		Digite a nova senha:<br>
 		<input type="password" name="senha"><br>
@@ -39,10 +39,9 @@
 </form>
 
 <?php
-    //aqui continua o bloco php anterior
+
 	} else {
 		echo "Token inválido ou em uso!";
 		exit;
 	}
 }
-?>
