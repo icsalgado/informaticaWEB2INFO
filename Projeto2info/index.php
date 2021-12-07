@@ -169,7 +169,7 @@
             <img src="./assets/img/haas.jpg" alt="Haas">
             <h3 style="color: white;">Haas</h3>
         </div>
-    </div>
+    </div> 
     <!-- owl javascript -->
     <script src="./assets/owl/jquery.min.js"></script>
     <script src="./assets/owl/owl.carousel.min.js"></script>
