@@ -3,7 +3,7 @@
     session_start();
     if(isset($_SESSION['nivel']) && !empty($_SESSION['nivel'])){//verifica se a sessão foi iniciada e se não está vazio
         echo "Acesso";
-    }else{
+    }else{ 
         header('Location: login.php');
         exit;
     }

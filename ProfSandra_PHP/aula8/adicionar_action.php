@@ -17,7 +17,7 @@
         $sql->execute();
 
         //if($sql->fetch() > 0){
-        if($sql->rowCount() > 0){
+        if($sql->rowCount() > 0){ 
             ?>
                 <html><a href="index.php">Voltar</a></html>
                 <script>alert("Usuário já cadastrado")</script>
