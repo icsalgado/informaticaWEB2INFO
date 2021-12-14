@@ -30,7 +30,8 @@
     width: 300px;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+.btn{
+    /**/
+    background-color: #122A57;
 }
+

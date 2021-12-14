@@ -1,3 +1,40 @@
+<?php
+	require 'config.php';
+
+	$dado = [];
+
+		$email = filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+		$senha = filter_input(INPUT_POST,'senha');
+
+		if($email && $senha){
+
+			$sql = $pdo->prepare("SELECT * FROM usuarios WHERE email = :email AND senha = :senha");
+			$sql->bindValue(':email',strtolower($email));
+			$sql->bindValue(':senha',md5($senha));
+			$sql->execute();
+		
+			if($sql->rowCount() > 0) {
+					
+				$dado = $sql->fetch(PDO::FETCH_ASSOC);
+				
+	    		if($dado['nivel'] == 1){
+					session_start();
+					$_SESSION['nivel'] = $dado['nivel'];
+					header("Location: manage.php");
+					exit;
+				}else{	
+					session_start();
+					$_SESSION['nivel'] = $dado['nivel'];
+					header("Location: painelUsuario.php");
+					exit;
+				}
+			}else{
+					header("Location: login.php");
+					exit;
+			}			
+		} 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -20,7 +57,7 @@
                         <h1>Formula 1 - portal de login</h1>
                     </div>
                     <div>
-                        <a href="../index.php">Voltar</a>
+                        <a href="../index.php">Voltar</a> 
                     </div>
                 </div>
             </header>

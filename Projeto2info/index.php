@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -23,7 +23,7 @@
             </div>
             <ul class="menu-list">
                 <li><a href="https://www.formula1.com/" target="_blank">Site oficial</a></li>
-                <li><a href="./assets/login.php">Login</a></li>
+                <li><a href="./restrict/login.php">Login</a></li>
             </ul>
         </div>
     </header>
@@ -170,6 +170,7 @@
             <h3 style="color: white;">Haas</h3>
         </div>
     </div> 
+
     <!-- owl javascript -->
     <script src="./assets/owl/jquery.min.js"></script>
     <script src="./assets/owl/owl.carousel.min.js"></script>
